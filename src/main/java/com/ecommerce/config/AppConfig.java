@@ -40,7 +40,6 @@ public class AppConfig {
 
                 .and()
                 .csrf(AbstractHttpConfigurer::disable)
-                .csrf().disable()
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/auth/**").permitAll()   // ✅ allow signin/signup
                         .requestMatchers("/api/**").authenticated()
